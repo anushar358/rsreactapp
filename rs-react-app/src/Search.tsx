@@ -30,7 +30,7 @@ class Search extends Component<unknown, SearchState> {
     e.preventDefault();
     this.setState({ submittedText: this.state.inputText });
     console.log("Search submitted:", this.state.submittedText);
-    localStorage.setItem("serchText", this.state.inputText);
+    localStorage.setItem("searchText", this.state.inputText);
   };
 
   render() {
