@@ -1,6 +1,7 @@
 .form{
-      margin-top: 0px;
-  transform: translateY(-80px);
+      margin-top: 40px;
+      padding: 10px;
+  transform: translateY(-40px);
     background-color: rgb(5, 141, 96);
 }
 .form input{
@@ -30,7 +31,7 @@
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
-  transform: translateY(-80px);
+  transform: translateY(-40px);
 }
 
 .table th,
