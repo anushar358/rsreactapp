@@ -6,10 +6,12 @@ import React, {
 } from "react";
 import SearchResultsFunctional from "./SearchResultsFunctional";
 import "./styles.css";
+import { useTheme } from "./ThemeContext";
 
 const SearchFunctional: React.FC = () => {
   const [inputText, setInputText] = useState<string>("");
   const [submittedText, setSubmittedText] = useState<string>("");
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const savedSearch = localStorage.getItem("searchText");
@@ -34,6 +36,9 @@ const SearchFunctional: React.FC = () => {
 
   return (
     <>
+      <button onClick={toggleTheme}>
+        Switch to {theme === "light" ? "Dark" : "Light"} Mode
+      </button>
       <form onSubmit={handleSubmit} className="form">
         <div>
           <input
